@@ -8,6 +8,12 @@ Before you begin, ensure you have met the following requirements:
 
 - **Docker**: Install Docker on your local machine.
 
+### Install Angular CLI
+
+If you haven't already, you'll need to install Angular CLI to manage and build your Angular project. You can do this by running the following command:
+
+`npm install -g @angular/cli`
+
 ### Getting Started with Docker
 
 These instructions will help you set up and run the Angular application in a Docker container.
