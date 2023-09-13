@@ -1,0 +1,19 @@
+<div class="grid justify-content-evenly" *ngIf="movie">
+  <div
+    class="xl:col-3 md:col-4 sm:col-6 border-round shadow-3 p-3 mt-2"
+    style="max-height: 600px; overflow: hidden"
+  >
+    <img
+      src="{{
+        movie.poster_path !== null
+          ? 'https://image.tmdb.org/t/p/w500' + movie.poster_path
+          : './assets/320x200.png'
+      }}"
+      alt="{{ movie.title }}"
+      style="width: 100%; height: 100%; object-fit: cover"
+    />
+  </div>
+  <div class="xl:col-8 col-12 border-round shadow-3 p-3 mt-2">
+    <app-movie-details [SingleMovie]="movie"></app-movie-details>
+  </div>
+</div>

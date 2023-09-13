@@ -1,0 +1,8 @@
+<div class="grid" *ngIf="creators">
+  <div class="col-4 text-black-alpha-90">Creators:</div>
+  <div class="col-8">
+    <ul class="m-0 p-0 list-none text-gray-700">
+      <li *ngFor="let creator of creators">{{ creator.name }}</li>
+    </ul>
+  </div>
+</div>

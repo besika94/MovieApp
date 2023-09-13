@@ -1,0 +1,39 @@
+<p-card
+  header="{{ movie.original_title }}"
+  [style]="{
+    maxWidth: '330px',
+    height: '400px',
+    overflow: 'hidden',
+    margin: 'auto'
+  }"
+  *ngIf="movie"
+>
+  <ng-template pTemplate="header">
+    <div class="p-1 border-round overflow-hidden">
+      <img
+        alt="Card"
+        src="{{
+          movie.poster_path !== null
+            ? 'https://image.tmdb.org/t/p/w500' + movie.poster_path
+            : './assets/320x200.png'
+        }}"
+        style="width: 320px; height: 200px; object-fit: cover"
+      />
+    </div>
+  </ng-template>
+  <div class="grid">
+    <p class="col-8 my-0 text-sm">
+      <span>Release Date:</span> {{ movie.release_date | date : "dd/MM/yyyy" }}
+    </p>
+    <p class="col-4 my-0 text-sm">
+      <span>Rating:</span> {{ movie.vote_average | number : "1.2-2" }}
+    </p>
+    <p
+      class="col-12 my-0 text-sm text-overflow-ellipsis overflow-hidden white-space-nowrap"
+    >
+      <span>Overview:</span>
+      <br />
+      {{ movie.overview }}
+    </p>
+  </div>
+</p-card>

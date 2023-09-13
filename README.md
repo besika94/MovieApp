@@ -1,5 +1,27 @@
 # MovieApp
 
+## Docker Instructions
+
+### Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- **Docker**: Install Docker on your local machine.
+
+### Getting Started with Docker
+
+These instructions will help you set up and run the Angular application in a Docker container.
+
+1. Build the Docker image for the Angular app:
+
+   `docker build -t movie-app .`
+
+2. Run the Docker container, mapping port 8080 on your host to port 80 in the container:
+
+   `docker run -p 8080:80 movie-app`
+
+3. Access the Angular app in your web browser by navigating to `http://localhost:8080`.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
 ## Development server

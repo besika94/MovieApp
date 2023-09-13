@@ -1,0 +1,32 @@
+<div class="input-group text-center mb-5">
+  <input
+    class="mr-2 w-6 text-center"
+    type="text"
+    pInputText
+    placeholder="Please enter movie name"
+    [(ngModel)]="searchTerm"
+  />
+
+  <p-button
+    label="Search movies"
+    type="button"
+    (onClick)="onSearchMovie()"
+  ></p-button>
+</div>
+
+<div
+  class="bg-red-200 w-6 mx-auto text-center border-round p-2"
+  *ngIf="!movies.length"
+>
+  <p class="m-0">No movies were found !</p>
+</div>
+
+<div class="grid mt-5" *ngIf="movies.length > 0">
+  <div
+    class="xl:col-3 lg:col-4 md:col-6 col p-2 cursor-pointer mb-3"
+    (click)="onMovieCard(movie.id)"
+    *ngFor="let movie of movies"
+  >
+    <app-movie-card [movie]="movie"></app-movie-card>
+  </div>
+</div>

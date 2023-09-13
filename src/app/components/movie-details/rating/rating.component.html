@@ -1,0 +1,6 @@
+<div class="grid" *ngIf="rating">
+  <div class="col-4">Rating:</div>
+  <div class="col-8 text-gray-700">
+    {{ rating | number : "1.2-2" }}
+  </div>
+</div>

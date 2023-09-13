@@ -1,0 +1,11 @@
+<div *ngIf="SingleMovie">
+  <app-genres [genres]="SingleMovie.genres"></app-genres>
+  <hr class="col-12 p-0" />
+  <app-rating [rating]="SingleMovie.vote_average"></app-rating>
+  <hr class="col-12 p-0" />
+  <app-overview [overview]="SingleMovie.overview"></app-overview>
+  <hr class="col-12 p-0" />
+  <app-release-date [releaseDate]="SingleMovie.release_date"></app-release-date>
+  <hr class="col-12 p-0" />
+  <app-creators [creators]="SingleMovie.production_companies"></app-creators>
+</div>
